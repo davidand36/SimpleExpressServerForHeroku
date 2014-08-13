@@ -129,7 +129,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
         `$ git status`
     *   Commit the changes:
     
-    `$ git commit`
+        `$ git commit`
 
     Push your latest work to GitHub:
     
@@ -149,7 +149,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 
     You can get information about your Heroku site's activity with commands like:
     
-    `$ heroku logs --tail`
+    `$ heroku logs --tail` (quit with Ctrl-C)
 
     and
 
