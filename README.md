@@ -19,9 +19,11 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
     *   `$ npm -v`
 
 2.  Install [Git](http://git-scm.com/). On Debina/Ubuntu/Mint, just run
+
     `$ sudo apt-get install git`
 
     Test:
+    
     `$ git --version`
 
     Configure Git:
@@ -55,6 +57,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 
 7.  Test the project:
     1.  Start the Node server:
+    
         `$ node web.js`
     2.  In your browser, go to _localhost:8300_. You should see a basic Web home page.
     3.  At the command line, press Ctrl-C to stop the server.
@@ -77,8 +80,10 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 
     1.  Open a new terminal and go to your project directory.
     2.  Start the local Heroku server:
+    
         `$ foreman start web`
-        It should tell you which port it is using, e.g. `Listening on port 5000`
+        
+        It should tell you which port it is using, e.g. "Listening on port 5000".
     3.  In your browser, go to _localhost:5000_ (or whatever port you were given). You should see that basic Web home page.
     4.  At the command line, you can press Ctrl-C to stop the server. But, even better, you can leave it running while you work on the next steps. (Run the server in one terminal while you work in another.) Refreshing the browser should show changes as you make them.
 
@@ -94,13 +99,13 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 
 12.  Modify these files:
     *   _package.json_: Change these fields:
-    *   _name_: Your project name
-    *   _version_: Your project version (update as appropriate)
-    *   _description_: Describe your project
-    *   _repository url_: Your GitHub repository
-    *   _bugs url_: For your GitHub repository
-    *   _homepage_: Your GitHub repository
-    *   _keywords_: Terms characterizing your site
+        *   _name_: Your project name
+        *   _version_: Your project version (update as appropriate)
+        *   _description_: Describe your project
+        *   _repository url_: Your GitHub repository
+        *   _bugs url_: For your GitHub repository
+        *   _homepage_: Your GitHub repository
+        *   _keywords_: Terms characterizing your site
     *   _README.md_: Explain your project for GitHub users
 
 13.  The _public/_ is all yours. Build your site there. Certainly change
