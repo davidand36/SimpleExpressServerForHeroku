@@ -101,11 +101,12 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
     *   _bugs url_: For your GitHub repository
     *   _homepage_: Your GitHub repository
     *   _keywords_: Terms characterizing your site
-    *   _README.html_: Explain your project for GitHub users
+    *   _README.md_: Explain your project for GitHub users
 
 13.  The _public/_ is all yours. Build your site there. Certainly change
     *   _favicon.ico_. (I personally use [Inkscape](http://www.inkscape.org/en/) for most graphics work.)
     *   _index.html_: the "home" page for the project.
+    *   Replace or remove any other files in _public/_.
     *   Feel free to create subdirectories, CSS, JavaScript, graphics, and more.
 
 14.  Once you have the first version of your site working and ready, check it into Git:

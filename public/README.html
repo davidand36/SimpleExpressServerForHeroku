@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Express Server for Heroku</title>
+  </head>
+
+  <body>
+    <h1>README for a Simple Express Server for Heroku</h1>
+
+    <h2>Introduction</h2>
+    <p>
+      This project provides an easy way to deploy a Web server on Heroku. It will serve &quot;static&quot; files, including HTML, CSS, JavaScript, and images.
+    </p>
+    <p>
+      Everything here is free, mostly open-source. Heroku is free for modest sites where performance is not important.
+    </p>
+
+    <h2>Instructions</h2>
+    <p>
+      These instructons apply most directly to Linux, particularly Debian, Ubuntu, Mint, or related distributions. But you will find instructions for other operating systems at the various projects' Web sites.
+    </p>
+    <p>
+      Many of these steps are done at the command line (a.k.a. terminal or shell), and the command prompt is represented by &quot;$&quot;.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Install <a href="http://nodejs.org/" target="_blank">Node.js</a>, following <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager" target="_blank">these instructions</a>.
+        </p>
+        <p>
+          Test the installation at the command-line prompt with: <br/>
+          <code>$ node -v</code> <br/>
+          <code>$ npm -v</code>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Install <a href="http://git-scm.com/" target="_blank">Git</a>. On Debina/Ubuntu/Mint, just run <br/>
+          <code>$ sudo apt-get install git</code>
+        </p>
+        <p>
+          Test: <br/>
+          <code>$ git --version</code>
+        </p>
+        <p>
+          Configure Git:
+          <ul>
+            <li><code>$ git config --global user.name &quot;<em>Your Name</em>&quot;</code></li>
+            <li><code>$ git config --global user.email &quot;<em>your_email@some_domain.com</em>&quot;</code></li>
+          </ul>
+          You should also set your system's EDITOR environment variable to something you like. Many people choose <em>vim</em> or <em>nano</em>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Go to <a href="https://github.com" target="_blank">GitHub</a> and create an account. You can use this account for all of your projects.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Go to <a href="https://github.com/davidand36/SimpleExpressServerForHeroku" target="_blank">the repository for this project</a> and click the <em>Fork</em> button at the top right. This will create a copy (fork) of the repository in your own account.
+        </p>
+        <p>
+          Rename your project: Go to your copy (<code>https://github.com/<em>your_account</em>/SimpleExpressServerForHeroku</code>). Click the project <em>Settings</em> link. Type a new name (e.g., &quot;YourProject&quot;) and click the <em>Rename</em> button.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          At the command line, go to your projects directory, e.g.: <br/>
+          <code>$ cd ~/Projects</code>
+        </p>
+        <p>
+          Clone your forked project to this directory: <br/>
+          <code>$ git clone git:github.com:<em>your_account</em>/<em>YourProject</em>.git</code> <br/>
+          This will create a new directory, <code>~/Projects/YourProject</code>, and copy the project code there.
+        </p>
+        <p>
+          Go to your new project directory: <br/>
+          <code>$ cd YourProject</code>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Install the node modules required for this project: <br/>
+          <code>$ npm install</code> <br/>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Test the project:
+          <ol>
+            <li>
+              <p>
+                Start the Node server: <br/>
+                <code>$ node web.js</code>
+              </p>
+            </li>
+            <li>In your browser, go to <em>localhost:8300</em>. You should see a basic Web home page.</li>
+            <li>At the command line, press Ctrl-C to stop the server.</li>
+          </ol>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Go to <a href="https://signup.heroku.com/dc" target="_blank">Heroku</a> and create an account. Choose <em>Node.js</em> as your development language. You can use this account for all of your projects in various languages.
+        </p>
+        <p>
+          You should walk through the <em>Getting Started</em> tutorial at the Heroku site at some point, but these instructions will be enough for now.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Install the <a href="https://toolbelt.heroku.com" target="_blank">Heroku Toolbelt</a>. Instructions vary by platform; for Debian/Ubuntu/Mint: <br/>
+          <code>$ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</code>
+        </p>
+        <p>
+          Type <br/>
+          <code>$ heroku login</code> <br/>
+          Enter the e-mail address and password you used to create your Heroku account.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Test your setup:
+          <ol>
+            <li>Open a new terminal and go to your project directory.</li>
+            <li>
+              <p>
+                Start the local Heroku server: <br/>
+                <code>$ foreman start web</code>
+              </p>
+              <p>
+                It should tell you which port it is using, e.g. <code>Listening on port 5000</code>
+              </p>
+            </li>
+            <li>In your browser, go to <em>localhost:5000</em> (or whatever port you were given). You should see that basic Web home page.</li>
+            <li>At the command line, you can press Ctrl-C to stop the server. But, even better, you can leave it running while you work on the next steps. (Run the server in one terminal while you work in another.) Refreshing the browser should show changes as you make them.</li>
+          </ol>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Create a Heroku repository for this project: <br/>
+          <code>$ heroku create</code> <br/>
+        </p>
+        <p>
+          Heroku assigns a unique name to your project, e.g., <em>infinite-journey-4288</em> and creates a remote Git repository on its servers for your project. If you type <br/>
+          <code>$ git remote -v</code> <br/>
+          you should see two pairs of remote repositories: one labeled <em>heroku</em> at <code>heroku.com</code> and one labeled <em>origin</em> at <code>github.com</code>. The former is what Heroku uses to run your Web site. The latter is for safekeeping of your code and sharing with others.
+        </p>
+      </li>
+      
+      <li>
+        <p>
+          Modify these files:
+          <ul>
+            <li>
+              <em>package.json</em>: Change these fields:
+              <ul>
+                <li><em>name</em>: Your project name</li>
+                <li><em>version</em>: Your project version (update as appropriate)</li>
+                <li><em>description</em>: Describe your project</li>
+                <li><em>repository url</em>: Your GitHub repository</li>
+                <li><em>bugs url</em>: For your GitHub repository</li>
+                <li><em>homepage</em>: Your GitHub repository</li>
+                <li><em>keywords</em>: Terms characterizing your site</li>
+              </ul>
+            </li>
+            <li>
+              <em>README.html</em>: Explain your project for GitHub users
+            </li>
+          </ul>
+        </p>
+      </li>
+
+      <li>
+        The <em>public/</em> is all yours. Build your site there. Certainly change
+        <ul>
+          <li><em>favicon.ico</em>. (I personally use <a href="http://www.inkscape.org/en/" target="_blank">Inkscape</a> for most graphics work.)</li>
+          <li><em>index.html</em>: the &quot;home&quot; page for the project.
+        </ul>
+        Feel free to create subdirectories, CSS, JavaScript, graphics, and more.
+      </li>
+
+      <li>
+        <p>
+          Once you have the first version of your site working and ready, check it into Git:
+          <ul>
+            <li>
+              Get a summary of what you have changed: <br/>
+              <code>$ git status</code>
+            </li>
+            <li>
+              For files you have modified, check that the changes are what you want: <br/>
+              <code>$ git diff <em>filename</em></code>
+            </li>
+            <li>
+              Stage each file you are happy with: <br/>
+              <code>$ git add <em>filename</em></code>
+            </li>
+            <li>
+              Check again that everything you want to commit has been staged: <br />
+              <code>$ git status</code>
+            </li>
+            <li>
+              Commit the changes: <br/>
+              <code>$ git commit</code>
+            </li>
+          </ul>
+        </p>
+        <p>
+          Push your latest work to GitHub: <br/>
+          <code>$ git push origin master</code>
+        </p>
+        <p>
+          (Git has many more features and actions than are mentioned here. Read up on it when you get a chance. Also notice that <code>git status</code> explains your choices, such as how to undo things, precisely if tersely.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Push your latest work to Heroku: <br/>
+          <code>$ git push heroku master</code>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Test your Heroku Web site: <br/>
+          <code>$ heroku open</code> <br />
+          This opens your site in a browser.
+        </p>
+        <p>
+          You can get information about your Heroku site's activity with commands like: <br/>
+          <code>$ heroku logs --tail</code> <br />
+          and <br/>
+          <code>$ heroku ps</code>
+        </p>
+      </li>
+
+      <li>
+        Continue to build your site, cycling through steps 13-15 as long as you want.
+      </li>
+    </ol>
+    
+  </body>
+</html>
