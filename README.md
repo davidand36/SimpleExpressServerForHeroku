@@ -4,6 +4,8 @@
 
 This project provides an easy way to deploy a Web server on Heroku. It will serve "static" files, including HTML, CSS, JavaScript, and images.
 
+In addition to serving static files, this server echoes any form data posted to it back to the client. This is for instructional/experimental purposes.
+
 Everything here is free, mostly open-source. Heroku is free for modest sites where performance is not important.
 
 ## Instructions
