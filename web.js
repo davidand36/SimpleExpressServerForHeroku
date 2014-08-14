@@ -26,7 +26,7 @@ app.listen( port,
 // That is good for experimenting with forms, AJAX, etc.
 // For more useful form handling, particularly parsing of field values,
 // use something like https://www.npmjs.org/package/body
-// or https://github.com/expressjs/body-parser.
+// or https://github.com/expressjs/body-parser .
 
 function getRequestData( req, res, next )
 {
