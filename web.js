@@ -35,8 +35,8 @@ function echoRequestData( req, res, next )
 app.use( favicon( __dirname + '/public/favicon.ico' ) );
 app.use( logfmt.requestLogger() );
 app.use( compression() );
-app.use( getRequestData );
 app.use( express.static( __dirname + '/public' ) );
+app.use( getRequestData );
 app.use( echoRequestData );
 
 var port = Number( process.env.PORT || 8300 );
