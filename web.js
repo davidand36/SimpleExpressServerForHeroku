@@ -1,4 +1,4 @@
-/* Simple Express Server */
+/* Simple Express Server for Heroku */
 
 var express = require( 'express' );
 var favicon = require( 'serve-favicon' );
@@ -6,6 +6,21 @@ var logfmt = require( 'logfmt' );
 var compression = require( 'compression' );
 
 var app = express();
+
+app.use( favicon( __dirname + '/public/favicon.ico' ) );
+app.use( logfmt.requestLogger() );
+app.use( compression() );
+app.use( express.static( __dirname + '/public' ) );
+app.use( getRequestData );
+app.use( echoRequestData );
+
+var port = Number( process.env.PORT || 8300 );
+app.listen( port,
+            function( )
+            {
+                console.log( "Listening on port " + port );
+            } );
+
 
 // These functions gather and echo data posted from the client (if any).
 // That is good for experimenting with forms, AJAX, etc.
@@ -31,18 +46,3 @@ function echoRequestData( req, res, next )
     res.end( req.data );
     console.log( 'Request data: ' + req.data );
 }
-
-app.use( favicon( __dirname + '/public/favicon.ico' ) );
-app.use( logfmt.requestLogger() );
-app.use( compression() );
-app.use( express.static( __dirname + '/public' ) );
-app.use( getRequestData );
-app.use( echoRequestData );
-
-var port = Number( process.env.PORT || 8300 );
-app.listen( port,
-            function( )
-            {
-                console.log( "Listening on port " + port );
-            } );
-
