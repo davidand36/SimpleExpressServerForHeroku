@@ -78,10 +78,10 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
         It should tell you which port it is using, e.g. "Listening on port 5000".
     3.  In your browser, go to _localhost:5000_ (or whatever port you were given). You should see that basic Web home page.
     4.  At the command line, you can press Ctrl-C to stop the server. But, even better, you can leave it running while you work on the next steps. (Run the server in one terminal while you work in another.) Refreshing the browser should show changes as you make them.
-    5.  You can control the port Foreman uses by creating a _.env_ file with the contents
-    `PORT=<your port>`
-    If you do this, be sure to add the line
-    `.env`
+    5.  You can control the port Foreman uses by creating a _.env_ file with the contents  
+    `PORT=<your port>`  
+    If you do this, be sure to add the line  
+    `.env`  
     to your _.gitignore_ file, so it doesn't get checked into your Git repository or uploaded to Heroku.
 
 11.  Create a Heroku repository for this project:  
