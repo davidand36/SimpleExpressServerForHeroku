@@ -14,7 +14,7 @@ app.use( express.static( __dirname + '/public' ) );
 app.use( getRequestData );
 app.use( echoRequestData );
 
-var port = Number( process.env.PORT || 8300 );
+var port = Number( process.env.PORT || 6201 );
 app.listen( port,
             function( )
             {
