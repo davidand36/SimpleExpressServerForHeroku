@@ -17,7 +17,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 1.  Install [Node.js](http://nodejs.org/). The best way to do this depends on your OS, among other things.
 
     Most Linux distributions include _nodejs_ as a package in their repositories and you can install it with a command like  
-    `$ sudo apt-get install nodejs`
+    `$ sudo apt-get install nodejs`  
     For Mac OS X and Windows, you can download installers at [Node.js Downloads](https://nodejs.org/download/).
 
     If you find yourself using Node.js for other projects, you should consider using [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm). These allow you to switch between multiple versions and also to avoid permission issues that often arise when using _npm_.
