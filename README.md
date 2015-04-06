@@ -10,7 +10,7 @@ Everything here is free, mostly open-source. Heroku is free for modest sites whe
 
 ## Instructions
 
-These instructons apply most directly to Linux, particularly Debian, Ubuntu, Mint, or related distributions. But you will find instructions for other operating systems at the various projects' Web sites.
+These instructions apply most directly to Linux, particularly Debian, Ubuntu, Mint, or related distributions. But you will find instructions for other operating systems at the various projects' Web sites.
 
 Many of these steps are done at the command line (a.k.a. terminal or shell), and the command prompt is represented by "$".
 
