@@ -14,7 +14,13 @@ These instructons apply most directly to Linux, particularly Debian, Ubuntu, Min
 
 Many of these steps are done at the command line (a.k.a. terminal or shell), and the command prompt is represented by "$".
 
-1.  Install [Node.js](http://nodejs.org/), following [these instructions](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+1.  Install [Node.js](http://nodejs.org/). The best way to do this depends on your OS, among other things.
+
+    Most Linux distributions include _nodejs_ as a package in their repositories and you can install it with a command like  
+    `$ sudo apt-get install nodejs`
+    For Mac OS X and Windows, you can download installers at [Node.js Downloads](https://nodejs.org/download/).
+
+    If you find yourself using Node.js for other projects, you should consider using [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm). These allow you to switch between multiple versions and also to avoid permission issues that often arise when using _npm_.
 
     Test the installation at the command-line prompt with:
     *   `$ node -v`
@@ -29,7 +35,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
     Configure Git:
     *   `$ git config --global user.name "_Your Name_"`
     *   `$ git config --global user.email "_your_email@some_domain.com_"`
-    *   You should also set your system's EDITOR environment variable to something you like. Many people choose _vim_ or _nano_.
+    *   You should also set your system's EDITOR environment variable to something you like. Many people choose _nano_ or _vim_.
 
 3.  Go to [GitHub](https://github.com) and create an account. You can use this account for all of your projects.
 
