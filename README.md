@@ -60,7 +60,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 7.  Test the project:
     1.  Start the Node server:  
         `$ node web.js`
-    2.  You should see 'Listening on port 6201'.
+    2.  You should see "Listening on port 6201".
     3.  In your browser, go to _http://localhost:6201_. You should see a basic Web home page.
     4.  You won't be able to do anything in this terminal while the server is running. Either open a new terminal or, at the command line, press Ctrl-C to stop the server.
     5. You can change the port used for this app by editing _web.js_. I like to use a different port number for each Web app I write so I can run several at the same time. (Only one program at a time can listen on any particular port.) 
