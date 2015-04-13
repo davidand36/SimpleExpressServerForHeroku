@@ -60,8 +60,10 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 7.  Test the project:
     1.  Start the Node server:  
         `$ node web.js`
-    2.  In your browser, go to _localhost:8300_. You should see a basic Web home page.
-    3.  At the command line, press Ctrl-C to stop the server.
+    2.  You should see 'Listening on port 6201'.
+    3.  In your browser, go to _http://localhost:6201_. You should see a basic Web home page.
+    4.  You won't be able to do anything in this terminal while the server is running. Either open a new terminal or, at the command line, press Ctrl-C to stop the server.
+    5. You can change the port used for this app by editing _web.js_. I like to use a different port number for each Web app I write so I can run several at the same time. (Only one program at a time can listen on any particular port.) 
 
 8.  Go to [Heroku](https://signup.heroku.com/dc) and create an account. Choose _Node.js_ as your development language. You can use this account for all of your projects in various languages.
 
@@ -82,7 +84,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
         `$ foreman start web`
         
         It should tell you which port it is using, e.g. "Listening on port 5000".
-    3.  In your browser, go to _localhost:5000_ (or whatever port you were given). You should see that basic Web home page.
+    3.  In your browser, go to _http://localhost:5000_ (or whatever port you were given). You should see that basic Web home page.
     4.  At the command line, you can press Ctrl-C to stop the server. But, even better, you can leave it running while you work on the next steps. (Run the server in one terminal while you work in another.) Refreshing the browser should show changes as you make them.
     5.  You can control the port Foreman uses by creating a _.env_ file with the contents  
     `PORT=<your port>`  
