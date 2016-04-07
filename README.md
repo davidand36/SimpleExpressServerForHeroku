@@ -81,7 +81,7 @@ Many of these steps are done at the command line (a.k.a. terminal or shell), and
 
     1.  Open a new terminal and go to your project directory.
     2.  Start the local Heroku server:  
-        `$ foreman start web`
+        `$ heroku local web`
         
         It should tell you which port it is using, e.g. "Listening on port 6202".
     3.  In your browser, go to _http://localhost:6202_ (or whatever port you were given). You should see that basic Web home page.
